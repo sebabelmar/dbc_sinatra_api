@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'thin'
+gem 'unicorn'
 
 # PostgreSQL driver
 gem 'pg'
