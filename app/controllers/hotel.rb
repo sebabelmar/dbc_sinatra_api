@@ -1,7 +1,4 @@
 post '/hotels' do
-	p params
-	p request 
-
 	new_hotel = Hotel.create(name: params['name'])
 	json :data => new_hotel
 end

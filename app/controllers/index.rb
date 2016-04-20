@@ -1,9 +1,11 @@
 get '/' do
-
-	@a = 'hey'
-
-	haml '%div.title Super Sinatra API'
+	erb :index
 end
+
+# get '/' do
+# 	@a = 'hey'
+# 	haml '%div.title Super Sinatra API'
+# end
 
 get '/bananas/:apples' do
 	p params
