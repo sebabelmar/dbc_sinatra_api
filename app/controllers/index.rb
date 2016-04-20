@@ -2,7 +2,7 @@ get '/' do
 
 	@a = 'hey'
 
-	haml '%div.title Hello World'
+	haml '%div.title Super Sinatra API'
 end
 
 get '/bananas/:apples' do
