@@ -19,6 +19,9 @@ require 'sinatra'
 require "sinatra/reloader" if development?
 require "sinatra/json"
 
+# CORS for JSON API
+require 'sinatra/cross_origin'
+
 require 'erb'
 require 'haml'
 
@@ -40,6 +43,8 @@ configure do
 
   # Set the views to
   set :views, File.join(Sinatra::Application.root, "app", "views")
+
+  enable :cross_origin
 end
 
 # Set up the controllers and helpers
@@ -54,10 +59,3 @@ require APP_ROOT.join('config', 'database')
 # before do
 # 	p params
 # end
-
-# CORS for JSON API
-require 'sinatra/cross_origin'
-
-configure do
-  enable :cross_origin
-end
