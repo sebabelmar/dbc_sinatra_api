@@ -1,5 +1,7 @@
 get '/' do
-	erb :index
+
+	markdown = Redcarpet::Markdown.new()
+	markdown.render("This is *bongos*, indeed.")
 end
 
 # get '/' do

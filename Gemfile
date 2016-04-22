@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'unicorn'
-
+gem 'redcarpet'
 # PostgreSQL driver
 gem 'pg'
 
