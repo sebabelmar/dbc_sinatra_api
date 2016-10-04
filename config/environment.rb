@@ -31,12 +31,13 @@ APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
 APP_NAME = APP_ROOT.basename.to_s
 
 configure do
+  set :bind, '172.16.51.112'
   # By default, Sinatra assumes that the root is the file that calls the configure block.
   # Since this is not the case for us, we set it manually.
   set :root, APP_ROOT.to_path
 
-  # See: http://www.sinatrarb.com/faq.html#sessions
 
+  # See: http://www.sinatrarb.com/faq.html#sessions
   # Thurday topic
   enable :sessions
   set :session_secret, ENV['SESSION_SECRET'] || 'this is a secret shhhhh'

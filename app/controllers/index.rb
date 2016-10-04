@@ -1,13 +1,8 @@
 get '/' do
 
-	markdown = Redcarpet::Markdown.new()
+	markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
 	markdown.render("This is *bongos*, indeed.")
 end
-
-# get '/' do
-# 	@a = 'hey'
-# 	haml '%div.title Super Sinatra API'
-# end
 
 get '/bananas/:apples' do
 	p params
@@ -15,7 +10,7 @@ get '/bananas/:apples' do
 end
 
 get '/html' do
-	a = "IM A"
+	a = "HELLO HTML!!!!!!!!!qwq"
 
 	<<-html
 		<div> #{a} </div> 
