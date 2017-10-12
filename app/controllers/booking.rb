@@ -8,3 +8,7 @@ get '/bookings' do
 	bookings = Booking.all
 	json :data => bookings
 end
+
+get '/helo' do
+  "Woof!"
+end
